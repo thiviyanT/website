@@ -263,11 +263,11 @@ abbr[title] {
         display: block
     }
     .description {
-        position: relative;
         max-width: 30rem;
+        top: 184px;
         width: auto;
         padding: 20px;
-        margin: 0 auto !important
+        margin: 0 auto !important;
     }
     .backstretch {
         width: 100%;
