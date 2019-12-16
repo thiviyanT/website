@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<section class="fullwidth post">
+    <article>
+        <h1 class="post-title">{{ page.title }}</h1>
+        {%- if page.tags -%}
+        <p>
+            {% for tag in page.tags %}
+            <span class="post-tag">{{ tag }}</span>
+            {% endfor %}
+        </p>
+        {%- endif -%}
+        <span class="date">
+            Published on {{ page.date | date_to_string }}
+            {%- if page.last_modified_at -%}&nbsp;&amp; Last updated on {{ page.last_modified_at | date_to_string }}{%- endif -%}
+            &nbsp;by Thiviyan Thanapalasingam
+        </span>
+        <br>
+        <div class="post-body">{{ content }}</div>
+        <hr>
+        {%- if page.cite -%}
+        Cite as:
+        <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight">
+<code>@article&#123;{{ page.cite[0].citeas }},
+  title   = "{{ page.title }}",
+  author  = "{{ page.cite[0].author }}",
+  journal = "{{ page.cite[0].journal }}",
+  year    = "{{ page.cite[0].year }}",
+  url     = "{{ page.cite[0].url }}"
+&#125;</code>
+                </pre>
+            </div>
+        </div>
+        {%- endif -%}
+        <div class="post-navigation">
+          {% if page.previous.url %}
+            <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+          {% endif %}
+          {% if page.next.url %}
+            <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+          {% endif %}
+        </div>
+    </article>
+</section>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+});
+</script>

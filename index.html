@@ -1,0 +1,70 @@
+---
+layout: default
+title: "Thiviyan Thanapalasingam"
+---
+{% include header.html %}
+<section>
+
+    {%- if site.news -%}
+    <h2>News</h2>
+    {% assign ordered_news = site.news | sort: 'date' | reverse %}
+    {% for item in ordered_news limit:4 %}
+    <div class="date">{{ item.date | date_to_string }}</div>
+    <div class="new">{{ item.content }}</div>
+    {% endfor %}
+    {%- endif -%}
+
+    {%- if site.articles -%}
+    <h2>Journal article</h2>
+    {% assign ordered_articles = site.articles | sort: 'pub_year' | reverse %}
+    {% for article in ordered_articles %}
+    <p>
+        <b>{{ article.title }}</b>
+        {%- if article.pdf_url -%}
+            &nbsp;[ <a href="{{ article.pdf_url }}"> PDF </a> ]
+        {%- endif -%}
+        {%- if article.additional_links -%} 
+            &nbsp;[ {{ article.additional_links }} ]
+        {%- endif -%}
+        <br> {{ article.authors }}.
+        <br> {{ article.journal }} {{ article.volume }} {{ article.issue }}. {{ article.pub_year }}.
+    </p>
+    {% endfor %}
+    {%- endif -%}
+
+    {%- if site.papers -%}
+    <h2>Conference papers</h2>
+    {% assign ordered_papers = site.papers | sort: 'conf_year' | reverse %}
+    {% for paper in ordered_papers %}
+    <p>
+        <b>{{ paper.title }}</b>
+        {%- if paper.pdf_url -%}
+            &nbsp;[ <a href="{{ paper.pdf_url }}"> PDF </a> ]
+        {%- endif -%}
+        {%- if paper.additional_links -%} 
+            &nbsp;[ {{ paper.additional_links }} ]
+        {%- endif -%}
+        <br> {{ paper.authors }}.
+        <br> {{ paper.venue_info }}.
+    </p>
+    {% endfor %}
+    {%- endif -%}
+
+    {%- if site.reports -%}
+    <h2>Technical reports</h2>
+    {% assign ordered_reports = site.reports | sort: 'pub_year' | reverse %}
+    {% for report in ordered_reports %}
+    <p>
+        <b>{{ report.title }}</b>
+        {%- if report.pdf_url -%}
+            &nbsp;[ <a href="{{ report.pdf_url }}"> PDF </a> ]
+        {%- endif -%}
+        {%- if report.additional_links -%}
+            &nbsp;[ {{ report.additional_links }} ]
+        {%- endif -%}
+        <br> {{ report.authors }}.
+        <br> {{ report.venue_info }}. {{ report.pub_year }}.
+    </p>
+    {% endfor %}
+    {%- endif -%}
+</section>
