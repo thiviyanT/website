@@ -64,6 +64,10 @@ title: "Thiviyan Thanapalasingam"
         {%- endif -%}
         <br> {{ report.authors }}.
         <br> {{ report.venue_info }}. {{ report.pub_year }}.
+        {%- if report.awards -%}
+            <br>
+            <span style="color: #aa0000;">{{ report.awards }}</span>
+        {%- endif -%}
     </p>
     {% endfor %}
     {%- endif -%}
