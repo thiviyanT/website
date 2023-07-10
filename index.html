@@ -90,6 +90,10 @@ title: "Thiviyan Thanapalasingam"
         {%- endif -%}
         <br> {{ paper.authors }}.
         <br> {{ paper.venue_info }}.
+        {%- if paper.awards -%}
+            <br>
+            <span style="color: #aa0000;">{{ paper.awards }}</span>
+        {%- endif -%}
     </p>
     {% endfor %}
     {%- endif -%}
