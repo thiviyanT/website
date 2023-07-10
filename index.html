@@ -23,6 +23,9 @@ title: "Thiviyan Thanapalasingam"
             {%- if preprint.pdf_url -%}
                 &nbsp;[ <a href="{{ preprint.pdf_url }}"> PDF </a> ]
             {%- endif -%}
+            {%- if preprint.tag -%}
+                <span class="tag">{{ preprint.tag }}</span>
+            {%- endif -%}
             {%- if preprint.additional_links -%}
                 &nbsp;[ {{ preprint.additional_links }} ]
             {%- endif -%}

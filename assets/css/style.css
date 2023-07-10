@@ -337,3 +337,15 @@ footer {
     border-bottom: 1px solid lightgrey;
     padding: 10px 0;
 }
+
+.tag{
+    font-size: 7px;
+    font-weight: bolder;
+    background-color: #C43302;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    position: absolute;
+    margin: 0 9px;
+    text-transform: uppercase;
+}
