@@ -80,7 +80,7 @@ title: "Thiviyan Thanapalasingam"
             {% endif %}
             {% unless forloop.last %}, {% endunless %}
         {% endfor %}
-        <br> {{ organisation.venue_info }}. {{ organisation.conf_year }}.
+        <br> {{ organisation.venue_info }} {{ organisation.conf_year }} in {{ organisation.location }}.
         {%- if organisation.notes -%}
             <br>
             <span>{{ organisation.notes }}</span>

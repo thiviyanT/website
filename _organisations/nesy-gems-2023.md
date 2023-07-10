@@ -22,5 +22,4 @@ organisers:
 venue_info: International Conference on Learning Representations (ICLR)
 location: Kigali, Rwanda. 
 conf_year: 2023
-notes: ""
 ---
