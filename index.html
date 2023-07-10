@@ -94,22 +94,22 @@ title: "Thiviyan Thanapalasingam"
     {% endfor %}
     {%- endif -%}
 
-<!--    {%- if site.posters -%}-->
-<!--    <h2>Posters & Demos </h2>-->
-<!--    {% assign ordered_posters = site.posters | sort: 'conf_year' | reverse %}-->
-<!--    {% for poster in ordered_posters %}-->
-<!--    <p>-->
-<!--        <b>{{ poster.title }}</b>-->
-<!--        {%- if poster.pdf_url -%}-->
-<!--            &nbsp;[ <a href="{{ poster.pdf_url }}"> PDF </a> ]-->
-<!--        {%- endif -%}-->
-<!--        {%- if poster.additional_links -%}-->
-<!--            &nbsp;[ {{ poster.additional_links }} ]-->
-<!--        {%- endif -%}-->
-<!--        <br> {{ poster.authors }}.-->
-<!--        <br> {{ poster.venue_info }}.-->
-<!--    </p>-->
-<!--    {% endfor %}-->
-<!--    {%- endif -%}-->
+    {%- if site.posters -%}
+    <h2>Posters & Demos </h2>
+    {% assign ordered_posters = site.posters | sort: 'conf_year' | reverse %}
+    {% for poster in ordered_posters %}
+    <p>
+        <b>{{ poster.title }}</b>
+        {%- if poster.pdf_url -%}
+            &nbsp;[ <a href="{{ poster.pdf_url }}"> PDF </a> ]
+        {%- endif -%}
+        {%- if poster.additional_links -%}
+            &nbsp;[ {{ poster.additional_links }} ]
+        {%- endif -%}
+        <br> {{ poster.authors }}.
+        <br> {{ poster.venue_info }}.
+    </p>
+    {% endfor %}
+    {%- endif -%}
     
 </section>
