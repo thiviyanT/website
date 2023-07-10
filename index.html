@@ -58,20 +58,29 @@ title: "Thiviyan Thanapalasingam"
     {% endfor %}
     {%- endif -%}
 
-    {%- if site.reports -%}
+    {%- if site.organisations -%}
     <h2>Organisation</h2>
     {% assign ordered_organisations = site.organisations | sort: 'pub_year' | reverse %}
     {% for organisation in ordered_organisations %}
     <p>
         <b>{{ organisation.title }}</b>
         {%- if organisation.url -%}
-            &nbsp;[ <a href="{{ organisation.url }}"> PDF </a> ]
+            &nbsp;[ <a href="{{ organisation.url }}"> Website </a> ]
         {%- endif -%}
         {%- if organisation.additional_links -%}
             &nbsp;[ {{ organisation.additional_links }} ]
         {%- endif -%}
         <br> {{ organisation.organisers }}.
-        <br> {{ organisation.venue_info }}. {{ organisation.pub_year }}.
+        <br>
+        {% for organiser in organisation.organisers %}
+            {% if organiser.url %}
+                <a href="{{ organiser.url }}">{{ organiser.name }}</a>
+            {% else %}
+                {{ organiser.name }}
+            {% endif %}
+            {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+        <br> {{ organisation.venue_info }}. {{ organisation.conf_year }}.
         {%- if organisation.notes -%}
             <br>
             <span>{{ organisation.notes }}</span>
