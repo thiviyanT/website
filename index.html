@@ -74,7 +74,7 @@ title: "Thiviyan Thanapalasingam"
         Organisers:
         {% for organiser in organisation.organisers %}
             {% if organiser.url %}
-                <a href="{{ organiser.url }}">{{organiser.name}} ({{organiser.affiliation}})</a>
+                <a href="{{ organiser.url }}">{{organiser.name}}</a> ({{organiser.affiliation}})
             {% else %}
                 {{organiser.name}} ({{organiser.affiliation}})
             {% endif %}
