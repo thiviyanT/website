@@ -20,6 +20,7 @@ organisers:
     url: "https://www.cs.cornell.edu/~ellisk/"
     affiliation: "Cornell University, USA"
 venue_info: International Conference on Learning Representations (ICLR)
+location: Kigali, Rwanda. 
 conf_year: 2023
-notes: "The workshop will be held in conjunction with the International Conference on Learning Representations (ICLR) 2023."
+notes: ""
 ---

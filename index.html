@@ -70,13 +70,13 @@ title: "Thiviyan Thanapalasingam"
         {%- if organisation.additional_links -%}
             &nbsp;[ {{ organisation.additional_links }} ]
         {%- endif -%}
-        <br> {{ organisation.organisers }}.
         <br>
+        Organisers:
         {% for organiser in organisation.organisers %}
             {% if organiser.url %}
-                <a href="{{ organiser.url }}">{{ organiser.name }}</a>
+                <a href="{{ organiser.url }}">{{organiser.name}} ({{organiser.affiliation}})</a>
             {% else %}
-                {{ organiser.name }}
+                {{organiser.name}} ({{organiser.affiliation}})
             {% endif %}
             {% unless forloop.last %}, {% endunless %}
         {% endfor %}
