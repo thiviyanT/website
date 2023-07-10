@@ -94,7 +94,7 @@ title: "Thiviyan Thanapalasingam"
     {%- endif -%}
 
     {%- if site.articles -%}
-    <h2 class="heading-text">Journal article</h2>
+    <h2 class="heading-text">Journal articles</h2>
         {% assign ordered_articles = site.articles | sort: 'pub_year' | reverse %}
         {% for article in ordered_articles %}
             <p>
