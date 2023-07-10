@@ -40,6 +40,8 @@ exclude:
   - README.md
   
 collections:
+  organisations:
+    output: false
   posters:
     output: false
   preprints:

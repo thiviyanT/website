@@ -58,6 +58,28 @@ title: "Thiviyan Thanapalasingam"
     {% endfor %}
     {%- endif -%}
 
+    {%- if site.reports -%}
+    <h2>Organisation</h2>
+    {% assign ordered_organisations = site.organisations | sort: 'pub_year' | reverse %}
+    {% for organisation in ordered_organisations %}
+    <p>
+        <b>{{ organisation.title }}</b>
+        {%- if organisation.url -%}
+            &nbsp;[ <a href="{{ organisation.url }}"> PDF </a> ]
+        {%- endif -%}
+        {%- if organisation.additional_links -%}
+            &nbsp;[ {{ organisation.additional_links }} ]
+        {%- endif -%}
+        <br> {{ organisation.organisers }}.
+        <br> {{ organisation.venue_info }}. {{ organisation.pub_year }}.
+        {%- if organisation.notes -%}
+            <br>
+            <span>{{ organisation.notes }}</span>
+        {%- endif -%}
+    </p>
+    {% endfor %}
+    {%- endif -%}
+
     {%- if site.articles -%}
     <h2>Journal article</h2>
     {% assign ordered_articles = site.articles | sort: 'pub_year' | reverse %}
