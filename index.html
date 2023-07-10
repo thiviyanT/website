@@ -106,7 +106,13 @@ title: "Thiviyan Thanapalasingam"
                     &nbsp;[ {{ article.additional_links }} ]
                 {%- endif -%}
                 <br> {{ article.authors }}.
-                <br> {{ article.journal }} ({{ article.pub_year }}) {{ article.volume }} ({{ article.issue }})
+                <br> {{ article.journal }} ({{ article.pub_year }})
+                {%- if article.volume -%}
+                    &nbsp;{{ article.volume }}
+                {%- endif -%}
+                {%- if article.issue -%}
+                    &nbsp;({{ article.issue }})
+                {%- endif -%}
                 {%- if article.pages -%}
                     &nbsp;: p{{ article.pages }}
                 {%- endif -%}
