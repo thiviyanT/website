@@ -5,5 +5,5 @@ additional_links: <a href="https://arxiv.org/abs/2208.11057">Full report</a>
 authors: Joint work with Dimitrios Alivanistos, Selene Báez Santamaría, Michael Cochez, Jan-Christoph Kalo, Emile van Krieken
 venue_info: Knowledge Base Construction from Pre-trained Language Models (LM-KBC) challenge at International Semantic Web Conference (ISWC) in Bertinoro, Italy
 pub_year: 2022
-awards: 🏆 Won 1st prize for the best performing model
+awards: Won 1st prize for the best-performing model 🏆
 ---
