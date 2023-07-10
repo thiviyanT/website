@@ -347,4 +347,5 @@ footer {
     border-radius: 3px;
     margin: 0px 10px;
     text-transform: uppercase;
+    word-break: break-word;
 }
