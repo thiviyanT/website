@@ -79,8 +79,8 @@ title: "Thiviyan Thanapalasingam"
             {% else %}
                 <li>{{organiser.name}} ({{organiser.affiliation}})</li>
             {% endif %}
-        </ul>
         {% endfor %}
+        </ul>
         <br> {{ organisation.venue_info }} {{ organisation.conf_year }} in {{ organisation.location }}.
         {%- if organisation.notes -%}
             <br>
