@@ -62,7 +62,7 @@ title: "Thiviyan Thanapalasingam"
     <h2>Organisation</h2>
     {% assign ordered_organisations = site.organisations | sort: 'pub_year' | reverse %}
     {% for organisation in ordered_organisations %}
-    <p>
+    <p class="no-margin">
         <b>{{ organisation.title }}</b>
         {%- if organisation.url -%}
             &nbsp;[ <a href="{{ organisation.url }}"> Website </a> ]
@@ -72,7 +72,7 @@ title: "Thiviyan Thanapalasingam"
         {%- endif -%}
         <br>
         Organising Committee:
-        <ul>
+        <ul class="no-margin">
         {% for organiser in organisation.organisers %}
             {% if organiser.url %}
                 <li><a href="{{ organiser.url }}">{{organiser.name}}</a> ({{organiser.affiliation}})</li>
@@ -81,7 +81,7 @@ title: "Thiviyan Thanapalasingam"
             {% endif %}
         {% endfor %}
         </ul>
-        <br> {{ organisation.venue_info }} {{ organisation.conf_year }} in {{ organisation.location }}.
+        {{ organisation.venue_info }} {{ organisation.conf_year }} in {{ organisation.location }}.
         {%- if organisation.notes -%}
             <br>
             <span>{{ organisation.notes }}</span>

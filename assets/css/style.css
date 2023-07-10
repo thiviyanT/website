@@ -329,3 +329,6 @@ footer {
     margin-right: 15px;
 }
 
+.no-margin{
+    margin: 0;
+}
