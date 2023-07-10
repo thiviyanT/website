@@ -339,13 +339,12 @@ footer {
 }
 
 .tag{
-    font-size: 7px;
-    font-weight: bolder;
+    font-size: 9px;
+    font-weight: bold;
     background-color: #C43302;
     color: white;
     padding: 3px 8px;
     border-radius: 3px;
-    position: absolute;
-    margin: 0 9px;
+    margin: 0px 10px;
     text-transform: uppercase;
 }
