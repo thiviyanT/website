@@ -1,5 +1,6 @@
 ---
 title: "💎 Neurosymbolic Generative Models (NeSy-GeMS) Hybrid Workshop"
+type: Workshop
 url: "https://nesygems.github.io/"
 organisers: 
   - name: "Thiviyan Thanapalasingam"

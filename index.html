@@ -68,7 +68,8 @@ title: "Thiviyan Thanapalasingam"
             <p class="no-margin">
                 <b>{{ organisation.title }}</b>
                 {%- if organisation.url -%}
-                    &nbsp;[ <a href="{{ organisation.url }}"> Website </a> ]
+                     <br>
+                    &nbsp;<a href="{{ organisation.url }}"> {{ organisation.type }} Website </a>
                 {%- endif -%}
                 {%- if organisation.additional_links -%}
                     &nbsp;[ {{ organisation.additional_links }} ]
