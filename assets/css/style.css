@@ -332,3 +332,8 @@ footer {
 .no-margin{
     margin: 0 !important;
 }
+
+.heading-text{
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 0;
+}

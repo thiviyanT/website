@@ -6,146 +6,146 @@ title: "Thiviyan Thanapalasingam"
 <section>
 
     {%- if site.news -%}
-    <h2>News</h2>
-    {% assign ordered_news = site.news | sort: 'date' | reverse %}
-    {% for item in ordered_news limit:4 %}
-    <div class="date">{{ item.date | date_to_string }}</div>
-    <div class="new">{{ item.content }}</div>
-    {% endfor %}
+        <h2 class="heading-text">News</h2>
+        {% assign ordered_news = site.news | sort: 'date' | reverse %}
+        {% for item in ordered_news limit:4 %}
+            <div class="date">{{ item.date | date_to_string }}</div>
+            <div class="new">{{ item.content }}</div>
+        {% endfor %}
     {%- endif -%}
 
     {%- if site.preprints -%}
-    <h2>Preprints</h2>
-    {% assign ordered_preprints = site.preprints | sort: 'pub_year' | reverse %}
-    {% for preprint in ordered_preprints %}
-    <p>
-        <b>{{ preprint.title }}</b>
-        {%- if preprint.pdf_url -%}
-            &nbsp;[ <a href="{{ preprint.pdf_url }}"> PDF </a> ]
-        {%- endif -%}
-        {%- if preprint.additional_links -%}
-            &nbsp;[ {{ preprint.additional_links }} ]
-        {%- endif -%}
-        <br> {{ preprint.authors }}.
-        <br> {{ preprint.venue_info }}. {{ preprint.pub_year }}.
-        {%- if preprint.awards -%}
-            <br>
-            <span style="color: #aa0000;">{{ preprint.awards }}</span>
-        {%- endif -%}
-    </p>
-    {% endfor %}
+        <h2 class="heading-text">Preprints</h2>
+        {% assign ordered_preprints = site.preprints | sort: 'pub_year' | reverse %}
+        {% for preprint in ordered_preprints %}
+        <p>
+            <b>{{ preprint.title }}</b>
+            {%- if preprint.pdf_url -%}
+                &nbsp;[ <a href="{{ preprint.pdf_url }}"> PDF </a> ]
+            {%- endif -%}
+            {%- if preprint.additional_links -%}
+                &nbsp;[ {{ preprint.additional_links }} ]
+            {%- endif -%}
+            <br> {{ preprint.authors }}.
+            <br> {{ preprint.venue_info }}. {{ preprint.pub_year }}.
+            {%- if preprint.awards -%}
+                <br>
+                <span style="color: #aa0000;">{{ preprint.awards }}</span>
+            {%- endif -%}
+        </p>
+        {% endfor %}
     {%- endif -%}
 
     {%- if site.reports -%}
-    <h2>Technical reports</h2>
-    {% assign ordered_reports = site.reports | sort: 'pub_year' | reverse %}
-    {% for report in ordered_reports %}
-    <p>
-        <b>{{ report.title }}</b>
-        {%- if report.pdf_url -%}
-            &nbsp;[ <a href="{{ report.pdf_url }}"> PDF </a> ]
-        {%- endif -%}
-        {%- if report.additional_links -%}
-            &nbsp;[ {{ report.additional_links }} ]
-        {%- endif -%}
-        <br> {{ report.authors }}.
-        <br> {{ report.venue_info }}. {{ report.pub_year }}.
-        {%- if report.awards -%}
-            <br>
-            <span style="color: #aa0000;">{{ report.awards }}</span>
-        {%- endif -%}
-    </p>
-    {% endfor %}
+    <h2 class="heading-text">Technical reports</h2>
+        {% assign ordered_reports = site.reports | sort: 'pub_year' | reverse %}
+        {% for report in ordered_reports %}
+        <p>
+            <b>{{ report.title }}</b>
+            {%- if report.pdf_url -%}
+                &nbsp;[ <a href="{{ report.pdf_url }}"> PDF </a> ]
+            {%- endif -%}
+            {%- if report.additional_links -%}
+                &nbsp;[ {{ report.additional_links }} ]
+            {%- endif -%}
+            <br> {{ report.authors }}.
+            <br> {{ report.venue_info }}. {{ report.pub_year }}.
+            {%- if report.awards -%}
+                <br>
+                <span style="color: #aa0000;">{{ report.awards }}</span>
+            {%- endif -%}
+        </p>
+        {% endfor %}
     {%- endif -%}
 
     {%- if site.organisations -%}
-    <h2>Organisation</h2>
-    {% assign ordered_organisations = site.organisations | sort: 'pub_year' | reverse %}
-    {% for organisation in ordered_organisations %}
-    <p class="no-margin">
-        <b>{{ organisation.title }}</b>
-        {%- if organisation.url -%}
-            &nbsp;[ <a href="{{ organisation.url }}"> Website </a> ]
-        {%- endif -%}
-        {%- if organisation.additional_links -%}
-            &nbsp;[ {{ organisation.additional_links }} ]
-        {%- endif -%}
-        <br>
-        Organising Committee:
-        <ul class="no-margin">
-        {% for organiser in organisation.organisers %}
-            {% if organiser.url %}
-                <li><a href="{{ organiser.url }}">{{organiser.name}}</a> ({{organiser.affiliation}})</li>
-            {% else %}
-                <li>{{organiser.name}} ({{organiser.affiliation}})</li>
-            {% endif %}
+    <h2 class="heading-text">Organisation</h2>
+        {% assign ordered_organisations = site.organisations | sort: 'pub_year' | reverse %}
+        {% for organisation in ordered_organisations %}
+            <p class="no-margin">
+                <b>{{ organisation.title }}</b>
+                {%- if organisation.url -%}
+                    &nbsp;[ <a href="{{ organisation.url }}"> Website </a> ]
+                {%- endif -%}
+                {%- if organisation.additional_links -%}
+                    &nbsp;[ {{ organisation.additional_links }} ]
+                {%- endif -%}
+                <br>
+                Organising Committee:
+                <ul class="no-margin">
+                {% for organiser in organisation.organisers %}
+                    {% if organiser.url %}
+                        <li><a href="{{ organiser.url }}">{{organiser.name}}</a> ({{organiser.affiliation}})</li>
+                    {% else %}
+                        <li>{{organiser.name}} ({{organiser.affiliation}})</li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+                {{ organisation.venue_info }} {{ organisation.conf_year }} in {{ organisation.location }}.
+                {%- if organisation.notes -%}
+                    <br>
+                    <span>{{ organisation.notes }}</span>
+                {%- endif -%}
+            </p>
         {% endfor %}
-        </ul>
-        {{ organisation.venue_info }} {{ organisation.conf_year }} in {{ organisation.location }}.
-        {%- if organisation.notes -%}
-            <br>
-            <span>{{ organisation.notes }}</span>
-        {%- endif -%}
-    </p>
-    {% endfor %}
     {%- endif -%}
 
     {%- if site.articles -%}
-    <h2>Journal article</h2>
-    {% assign ordered_articles = site.articles | sort: 'pub_year' | reverse %}
-    {% for article in ordered_articles %}
-    <p>
-        <b>{{ article.title }}</b>
-        {%- if article.pdf_url -%}
-            &nbsp;[ <a href="{{ article.pdf_url }}"> PDF </a> ]
-        {%- endif -%}
-        {%- if article.additional_links -%} 
-            &nbsp;[ {{ article.additional_links }} ]
-        {%- endif -%}
-        <br> {{ article.authors }}.
-        <br> {{ article.journal }} {{ article.volume }} {{ article.issue }}. {{ article.pub_year }}.
-    </p>
-    {% endfor %}
+    <h2 class="heading-text">Journal article</h2>
+        {% assign ordered_articles = site.articles | sort: 'pub_year' | reverse %}
+        {% for article in ordered_articles %}
+            <p>
+                <b>{{ article.title }}</b>
+                {%- if article.pdf_url -%}
+                    &nbsp;[ <a href="{{ article.pdf_url }}"> PDF </a> ]
+                {%- endif -%}
+                {%- if article.additional_links -%}
+                    &nbsp;[ {{ article.additional_links }} ]
+                {%- endif -%}
+                <br> {{ article.authors }}.
+                <br> {{ article.journal }} {{ article.volume }} {{ article.issue }}. {{ article.pub_year }}.
+            </p>
+        {% endfor %}
     {%- endif -%}
 
     {%- if site.papers -%}
-    <h2>Conference papers</h2>
-    {% assign ordered_papers = site.papers | sort: 'conf_year' | reverse %}
-    {% for paper in ordered_papers %}
-    <p>
-        <b>{{ paper.title }}</b>
-        {%- if paper.pdf_url -%}
-            &nbsp;[ <a href="{{ paper.pdf_url }}"> PDF </a> ]
-        {%- endif -%}
-        {%- if paper.additional_links -%} 
-            &nbsp;[ {{ paper.additional_links }} ]
-        {%- endif -%}
-        <br> {{ paper.authors }}.
-        <br> {{ paper.venue_info }}.
-        {%- if paper.awards -%}
-            <br>
-            <span style="color: #aa0000;">{{ paper.awards }}</span>
-        {%- endif -%}
-    </p>
-    {% endfor %}
+    <h2 class="heading-text">Conference papers</h2>
+        {% assign ordered_papers = site.papers | sort: 'conf_year' | reverse %}
+            {% for paper in ordered_papers %}
+            <p>
+                <b>{{ paper.title }}</b>
+                {%- if paper.pdf_url -%}
+                    &nbsp;[ <a href="{{ paper.pdf_url }}"> PDF </a> ]
+                {%- endif -%}
+                {%- if paper.additional_links -%}
+                    &nbsp;[ {{ paper.additional_links }} ]
+                {%- endif -%}
+                <br> {{ paper.authors }}.
+                <br> {{ paper.venue_info }}.
+                {%- if paper.awards -%}
+                    <br>
+                    <span style="color: #aa0000;">{{ paper.awards }}</span>
+                {%- endif -%}
+            </p>
+        {% endfor %}
     {%- endif -%}
 
     {%- if site.posters -%}
-    <h2>Posters & Demos </h2>
-    {% assign ordered_posters = site.posters | sort: 'conf_year' | reverse %}
-    {% for poster in ordered_posters %}
-    <p>
-        <b>{{ poster.title }}</b>
-        {%- if poster.pdf_url -%}
-            &nbsp;[ <a href="{{ poster.pdf_url }}"> PDF </a> ]
-        {%- endif -%}
-        {%- if poster.additional_links -%}
-            &nbsp;[ {{ poster.additional_links }} ]
-        {%- endif -%}
-        <br> {{ poster.authors }}.
-        <br> {{ poster.venue_info }}.
-    </p>
-    {% endfor %}
+    <h2 class="heading-text">Posters & Demos </h2>
+        {% assign ordered_posters = site.posters | sort: 'conf_year' | reverse %}
+        {% for poster in ordered_posters %}
+            <p>
+                <b>{{ poster.title }}</b>
+                {%- if poster.pdf_url -%}
+                    &nbsp;[ <a href="{{ poster.pdf_url }}"> PDF </a> ]
+                {%- endif -%}
+                {%- if poster.additional_links -%}
+                    &nbsp;[ {{ poster.additional_links }} ]
+                {%- endif -%}
+                <br> {{ poster.authors }}.
+                <br> {{ poster.venue_info }}.
+            </p>
+        {% endfor %}
     {%- endif -%}
     
 </section>
