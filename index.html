@@ -14,6 +14,30 @@ title: "Thiviyan Thanapalasingam"
     {% endfor %}
     {%- endif -%}
 
+    <h2>Preprints</h2>
+
+    {%- if site.reports -%}
+    <h2>Technical reports</h2>
+    {% assign ordered_reports = site.reports | sort: 'pub_year' | reverse %}
+    {% for report in ordered_reports %}
+    <p>
+        <b>{{ report.title }}</b>
+        {%- if report.pdf_url -%}
+            &nbsp;[ <a href="{{ report.pdf_url }}"> PDF </a> ]
+        {%- endif -%}
+        {%- if report.additional_links -%}
+            &nbsp;[ {{ report.additional_links }} ]
+        {%- endif -%}
+        <br> {{ report.authors }}.
+        <br> {{ report.venue_info }}. {{ report.pub_year }}.
+        {%- if report.awards -%}
+            <br>
+            <span style="color: #aa0000;">{{ report.awards }}</span>
+        {%- endif -%}
+    </p>
+    {% endfor %}
+    {%- endif -%}
+
     {%- if site.articles -%}
     <h2>Journal article</h2>
     {% assign ordered_articles = site.articles | sort: 'pub_year' | reverse %}
@@ -49,26 +73,5 @@ title: "Thiviyan Thanapalasingam"
     </p>
     {% endfor %}
     {%- endif -%}
-
-    {%- if site.reports -%}
-    <h2>Technical reports</h2>
-    {% assign ordered_reports = site.reports | sort: 'pub_year' | reverse %}
-    {% for report in ordered_reports %}
-    <p>
-        <b>{{ report.title }}</b>
-        {%- if report.pdf_url -%}
-            &nbsp;[ <a href="{{ report.pdf_url }}"> PDF </a> ]
-        {%- endif -%}
-        {%- if report.additional_links -%}
-            &nbsp;[ {{ report.additional_links }} ]
-        {%- endif -%}
-        <br> {{ report.authors }}.
-        <br> {{ report.venue_info }}. {{ report.pub_year }}.
-        {%- if report.awards -%}
-            <br>
-            <span style="color: #aa0000;">{{ report.awards }}</span>
-        {%- endif -%}
-    </p>
-    {% endfor %}
-    {%- endif -%}
+    
 </section>
