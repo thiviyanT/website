@@ -72,13 +72,15 @@ title: "Thiviyan Thanapalasingam"
         {%- endif -%}
         <br>
         Organising Committee:
+        <ul>
         {% for organiser in organisation.organisers %}
             {% if organiser.url %}
-                <a href="{{ organiser.url }}">{{organiser.name}}</a> ({{organiser.affiliation}})
+                <li><a href="{{ organiser.url }}">{{organiser.name}}</a> ({{organiser.affiliation}})</li>
             {% else %}
-                {{organiser.name}} ({{organiser.affiliation}})
+                <li>{{organiser.name}} ({{organiser.affiliation}})</li>
             {% endif %}
             {% unless forloop.last %}, {% endunless %}
+        </ul>
         {% endfor %}
         <br> {{ organisation.venue_info }} {{ organisation.conf_year }} in {{ organisation.location }}.
         {%- if organisation.notes -%}
