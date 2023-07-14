@@ -244,6 +244,7 @@ hr {
 }
 
 footer {
+  display: none;
   background: white;
   width:270px;
   float:left;
