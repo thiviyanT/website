@@ -268,7 +268,7 @@ footer {
   }
 
   .hide-desktop-screen{
-    display: none !important;
+    display: none;
   }
 
   /*header {*/
@@ -363,6 +363,6 @@ footer {
     font-size: 10px;
 }
 
-.hide-desktop-screen{
-    display: block;
-}
+/*.hide-desktop-screen{*/
+/*    display: block;*/
+/*}*/
