@@ -363,7 +363,7 @@ footer {
     font-size: 10px;
 }
 
-#links > a.ai{
+#links > a .ai{
     position: relative;
-    top: 4px;
+    top: 5px;
 }
