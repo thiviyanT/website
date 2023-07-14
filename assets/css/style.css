@@ -264,6 +264,7 @@ footer {
     float:none;
     position:static;
     width:auto;
+    display: block;
   }
 
   /*header {*/
