@@ -358,11 +358,11 @@ footer {
     word-break: break-word;
 }
 
-.last-edit-test{
+.last-edit-text{
     margin:10px 0;
     font-size: 10px;
 }
 
 .hide-desktop-screen{
-    display: block;
+    display: block !important;
 }
