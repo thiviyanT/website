@@ -267,6 +267,10 @@ footer {
     display: block;
   }
 
+  .hide-desktop-screen{
+    display: none;
+  }
+
   /*header {*/
   /*  padding-right:320px;*/
   /*}*/
@@ -357,4 +361,8 @@ footer {
 .last-edit-test{
     margin:10px 0;
     font-size: 10px;
+}
+
+.hide-desktop-screen{
+    display: block;
 }
