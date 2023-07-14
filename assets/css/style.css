@@ -362,3 +362,8 @@ footer {
     margin:10px 0;
     font-size: 10px;
 }
+
+#links > a.ai{
+    position: relative;
+    top: 4px;
+}
