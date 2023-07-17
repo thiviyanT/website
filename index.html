@@ -8,7 +8,7 @@ title: "Thiviyan Thanapalasingam"
     {%- if site.news -%}
         <h2 class="heading-text">News</h2>
         {% assign ordered_news = site.news | sort: 'date' | reverse %}
-        {% for item in ordered_news limit:5 %}
+        {% for item in ordered_news limit:6 %}
             <div class="date">{{ item.date | date_to_string }}</div>
             <div class="new">{{ item.content }}</div>
         {% endfor %}
