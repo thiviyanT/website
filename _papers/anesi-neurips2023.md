@@ -5,4 +5,5 @@ authors: Emile van Krieken, Thiviyan Thanapalasingam, Jakub M. Tomczak, Frank va
 venue_info: Neural Information Processing Systems 2023
 conf_year: 2023
 awards: Also appeared at the Neurosymbolic Generative Models work at ICLR 2023
+tag: new
 ---
