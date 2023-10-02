@@ -48,6 +48,9 @@ title: "Thiviyan Thanapalasingam"
                 {%- if paper.pdf_url -%}
                     &nbsp;[ <a href="{{ paper.pdf_url }}"> PDF </a> ]
                 {%- endif -%}
+                {%- if paper.tag -%}
+                    <span class="tag">{{ paper.tag }}</span>
+                {%- endif -%}
                 {%- if paper.additional_links -%}
                     &nbsp;[ {{ paper.additional_links }} ]
                 {%- endif -%}
