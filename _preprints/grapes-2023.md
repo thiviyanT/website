@@ -4,6 +4,6 @@ pdf_url: https://arxiv.org/abs/2310.03399
 authors: Taraneh Younesian, Thiviyan Thanapalasingam, Emile van Krieken, Daniel Daza, Peter Bloem
 venue_info: arXiv preprint
 pub_year: 2023
-awards: Also appeared at the Graph Learning Frontiers workshop at NeurIPS 2023
+awards: Also presented at the Graph Learning Frontiers workshop at NeurIPS 2023
 tag: new
 ---
