@@ -2,4 +2,4 @@
 title: "NeSy Conference"
 ---
 
-I, along with Kareem Ahmed, am serving as an Area Chair for the <b>Neurosymbolic Generative Models</b> special track at the NeSy 2025 Conference. You can find the Call for Papers here: https://2025.nesyconf.org/nesy-generative-models/
+Together with <a href="https://kareemahmed.com/">Kareem Ahmed</a>, I am serving as an Area Chair for the <b>Neurosymbolic Generative Models</b> special track at the <a href="https://2025.nesyconf.org/nesy-generative-models/">NeSy 2025 Conference</a>. You can find the Call for Papers <a href="https://2025.nesyconf.org/nesy-generative-models/">here</a>.
